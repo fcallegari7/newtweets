@@ -1,0 +1,38 @@
+* {
+  font-family: 'avenir', sans-serif;
+  padding: .5rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.wrapper div {
+  border: 1px solid black;
+  min-height: 100px;
+}
+
+.profileCreation, .tweetsArea, .history {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.showUsers {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+input, textarea, button {
+  margin: .5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+}

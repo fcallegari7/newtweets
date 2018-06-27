@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tweets</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="function.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>NewTweets</h1>
+  <div class="wrapper">
+
+    <div class="profileCreation">
+    <h2>Create User</h2>
+    <input type="text" id="fullname" placeholder="Full Name">
+    <input type="text" id="username" placeholder="username">
+    <button id="createUser">CREATE</button>
+    </div>
+
+    <div class="tweetsArea">
+    <h2>Tweet</h2>
+    <textarea id="tweet" placeholder="Write a tweet..." rows="4"></textarea>
+    <button id="createTweet">TWEET</button>
+    </div>
+
+    <div class="showUsers">
+    <h2>Show Users</h2>
+    <ul id="listUsers"></ul>
+    <button id="showUser">SHOW</button>
+    </div>
+
+    <div class="history">
+    <h2>Tweet History</h2>
+    <ul id="tweetHistory"></ul>
+    <button id="clear">CLEAR</button>
+    </div>
+
+
+  </div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAbdaQFfz9MlGwLZGMx2vZ_BXMcf5Cc8vc",
+      authDomain: "tweetsfc.firebaseapp.com",
+      databaseURL: "https://tweetsfc.firebaseio.com",
+      projectId: "tweetsfc",
+      storageBucket: "",
+      messagingSenderId: "1059482894026"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="user.js"></script>
+  <script src="tweet.js"></script>
+
+</body>
+</html>
